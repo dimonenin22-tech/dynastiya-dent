@@ -153,31 +153,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // Cases Switcher Data
   const casesData = {
     1: {
-      category: "Естетична стоматологія",
-      duration: "Термін: 1 візит (2.5 години)",
-      title: "Художня реставрація передніх зубів під збільшенням 3x",
-      desc: "Відновлення анатомічної форми та природної прозорості ріжучого краю зуба японським нанокомпозитом Estelite. Лікар-реставратор: Анастасія Радченко.",
-      service: "Художня реставрація зубів",
-      afterText: "✨ Сяюча посмішка",
-      beforeText: "🔍 Початковий стан"
+      category: "Ортодонтія та виправлення прикусу",
+      duration: "Термін: 14 місяців",
+      title: "Виправлення глибокого прикусу та вирівнювання зубного ряду",
+      desc: "Лікування металевою брекет-системою. Корекція оклюзії та створення правильного естетичного перекриття. Лікар-ортодонт: Тетяна Миколаївна.",
+      service: "Ортодонтичне лікування",
+      beforeImg: "assets/before_after/case1_before.webp",
+      afterImg: "assets/before_after/case1_after.webp"
     },
     2: {
-      category: "Ортопедія та вініри",
-      duration: "Термін: 2 візити (7 днів)",
-      title: "Керамічні ультратонкі вініри E.max на зону посмішки",
-      desc: "Корекція мікротріщин емалі, вирівнювання оптичної осі зубів та створення бездоганної білизни. Стоматолог-ортопед: Олександр Олександрович.",
-      service: "Керамічні вініри та коронки",
-      afterText: "💎 Вініри E.max",
-      beforeText: "🔍 Сколи та діастема"
+      category: "Ортодонтія & Дитячий прикус",
+      duration: "Термін: 12 місяців",
+      title: "Апаратне розширення щелепи та усунення скученості зубів",
+      desc: "Усунення дистального зміщення, гармонізація профілю обличчя та вирівнювання зубів. Лікар-ортодонт: Тетяна Миколаївна.",
+      service: "Ортодонтичне лікування",
+      beforeImg: "assets/before_after/case2_before.webp",
+      afterImg: "assets/before_after/case2_after.webp"
     },
     3: {
-      category: "Профілактика та естетика",
-      duration: "Термін: 1 візит (60 хвилин)",
-      title: "Лазерне апаратне відбілювання системою Beyond",
-      desc: "Безпечне кабінетне відбілювання на 6 тонів шкали VITA без підвищення чутливості емалі із завершальним курсом ремінералізації.",
-      service: "Професійна гігієна Air Flow",
-      afterText: "🌟 Освітлення +6 тонів",
-      beforeText: "🔍 Наліт та дисколорит"
+      category: "Ортопедія та естетичні вініри",
+      duration: "Термін: 2 візити (7–10 днів)",
+      title: "Керамічні ультратонкі вініри E.max на зону посмішки",
+      desc: "Корекція форми та кольору зубів, відновлення мікрорельєфу емалі без надмірного препарування. Стоматолог-ортопед: Олександр Олександрович.",
+      service: "Керамічні вініри та коронки",
+      beforeImg: "assets/before_after/case3_before.webp",
+      afterImg: "assets/before_after/case3_after.webp"
     }
   };
 
@@ -187,8 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const caseTitle = document.getElementById('case-title');
   const caseDesc = document.getElementById('case-desc');
   const caseCtaBtn = document.getElementById('case-cta-btn');
-  const afterSmile = document.querySelector('.ba-smile-preview--after .ba-smile-icon');
-  const beforeSmile = document.querySelector('.ba-smile-preview--before .ba-smile-icon');
+  const baImgBefore = document.getElementById('ba-img-before');
+  const baImgAfter = document.getElementById('ba-img-after');
 
   caseTabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -210,8 +210,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (caseCtaBtn) {
         caseCtaBtn.setAttribute('data-service', data.service);
       }
-      if (afterSmile) afterSmile.textContent = data.afterText;
-      if (beforeSmile) beforeSmile.textContent = data.beforeText;
+      if (baImgBefore && data.beforeImg) {
+        baImgBefore.src = data.beforeImg;
+      }
+      if (baImgAfter && data.afterImg) {
+        baImgAfter.src = data.afterImg;
+      }
 
       // Reset slider to center
       if (baRange && baSlider) {

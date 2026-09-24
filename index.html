@@ -84,6 +84,10 @@
         </div>
       </div>
       <div class="hero-features-card">
+        <div class="hero-clinic-photo">
+          <img src="assets/clinic_interior.jpg" alt="Інтер'єр стоматологічної клініки Династія Dent" class="clinic-interior-img" loading="lazy">
+          <span class="hero-photo-tag">📍 м. Полтава, ЖК «Династія»</span>
+        </div>
         <h3 class="features-card-title">Чому обирають «Династія Dent»:</h3>
         <ul class="features-list">
           <li class="feature-item">
@@ -199,13 +203,13 @@
       <!-- Case Tabs -->
       <div class="cases-tabs" role="tablist" aria-label="Вибір клінічного кейсу">
         <button type="button" class="case-tab is-active" data-case="1" role="tab" aria-selected="true">
-          Художня реставрація
+          Ортодонтія & Брекети
         </button>
         <button type="button" class="case-tab" data-case="2" role="tab" aria-selected="false">
-          Керамічні вініри E.max
+          Виправлення прикусу
         </button>
         <button type="button" class="case-tab" data-case="3" role="tab" aria-selected="false">
-          Відбілювання Beyond
+          Керамічні вініри E.max
         </button>
       </div>
 
@@ -214,22 +218,14 @@
         <div class="ba-slider-container" id="ba-slider" style="--slider-pos: 50%;">
           <!-- Layer AFTER (Base layer) -->
           <div class="ba-layer ba-layer--after">
-            <div class="ba-visual ba-visual--after" id="ba-visual-after">
-              <span class="ba-case-badge ba-case-badge--after">Результат ПІСЛЯ</span>
-              <div class="ba-smile-preview ba-smile-preview--after">
-                <span class="ba-smile-icon">✨ Сяюча посмішка</span>
-              </div>
-            </div>
+            <img src="assets/before_after/case1_after.webp" alt="Результат лікування ПІСЛЯ" class="ba-img" id="ba-img-after">
+            <span class="ba-case-badge ba-case-badge--after">Результат ПІСЛЯ</span>
           </div>
 
           <!-- Layer BEFORE (Masked with clip-path, strictly anti-stretch) -->
           <div class="ba-layer ba-layer--before" id="ba-layer-before">
-            <div class="ba-visual ba-visual--before" id="ba-visual-before">
-              <span class="ba-case-badge ba-case-badge--before">Стан ДО</span>
-              <div class="ba-smile-preview ba-smile-preview--before">
-                <span class="ba-smile-icon">🔍 Початковий стан</span>
-              </div>
-            </div>
+            <img src="assets/before_after/case1_before.webp" alt="Клінічна ситуація ДО" class="ba-img" id="ba-img-before">
+            <span class="ba-case-badge ba-case-badge--before">Стан ДО</span>
           </div>
 
           <!-- Divider Handle -->
@@ -247,15 +243,15 @@
         <!-- Case Details -->
         <div class="ba-details">
           <div class="ba-meta">
-            <span class="ba-meta-tag" id="case-category">Естетична стоматологія</span>
-            <span class="ba-meta-time" id="case-duration">Термін: 1 візит (2.5 години)</span>
+            <span class="ba-meta-tag" id="case-category">Ортодонтія та виправлення прикусу</span>
+            <span class="ba-meta-time" id="case-duration">Термін: 14 місяців</span>
           </div>
-          <h3 class="ba-title" id="case-title">Художня реставрація передніх зубів під збільшенням 3x</h3>
+          <h3 class="ba-title" id="case-title">Виправлення глибокого прикусу та вирівнювання зубного ряду</h3>
           <p class="ba-description" id="case-desc">
-            Відновлення анатомічної форми та прозорості ріжучого краю зуба японським нанокомпозитом Estelite. Лікар-реставратор: Анастасія Радченко.
+            Лікування металевою брекет-системою. Корекція оклюзії та створення правильного естетичного перекриття. Лікар-ортодонт: Тетяна Миколаївна.
           </p>
           <div class="ba-action">
-            <button type="button" class="btn btn-primary open-booking-btn" id="case-cta-btn" data-service="Художня реставрація зубів">
+            <button type="button" class="btn btn-primary open-booking-btn" id="case-cta-btn" data-service="Ортодонтичне лікування">
               Хочу такий самий результат
             </button>
           </div>
@@ -276,7 +272,7 @@
         <div class="doctor-card">
           <div class="doctor-avatar-box">
             <span class="doctor-badge">Ортопедія & Вініри</span>
-            <div class="doctor-avatar-symbol">👨‍⚕️</div>
+            <img src="assets/team/oleksandr.jpg" alt="Олександр Олександрович — Стоматолог терапевт-ортопед" class="doctor-avatar-img" loading="lazy">
           </div>
           <div class="doctor-info">
             <h3 class="doctor-name">Олександр Олександрович</h3>
@@ -289,7 +285,7 @@
         <div class="doctor-card">
           <div class="doctor-avatar-box">
             <span class="doctor-badge">Естетика & Реставрація</span>
-            <div class="doctor-avatar-symbol">👩‍⚕️</div>
+            <img src="assets/team/anastasiya.jpg" alt="Анастасія Радченко — Лікар-реставратор" class="doctor-avatar-img" loading="lazy">
           </div>
           <div class="doctor-info">
             <h3 class="doctor-name">Анастасія Радченко</h3>
@@ -302,7 +298,7 @@
         <div class="doctor-card">
           <div class="doctor-avatar-box">
             <span class="doctor-badge">Хірургія & All-on-4</span>
-            <div class="doctor-avatar-symbol">👨‍⚕️</div>
+            <img src="assets/team/viktor.jpg" alt="Віктор Володимирович — Хірург-стоматолог, імплантолог" class="doctor-avatar-img" loading="lazy">
           </div>
           <div class="doctor-info">
             <h3 class="doctor-name">Віктор Володимирович</h3>
@@ -315,7 +311,7 @@
         <div class="doctor-card">
           <div class="doctor-avatar-box">
             <span class="doctor-badge">Ортодонтія & Прикус</span>
-            <div class="doctor-avatar-symbol">👩‍⚕️</div>
+            <img src="assets/team/tetyana.jpg" alt="Тетяна Миколаївна — Лікар-ортодонт" class="doctor-avatar-img" loading="lazy">
           </div>
           <div class="doctor-info">
             <h3 class="doctor-name">Тетяна Миколаївна</h3>
@@ -328,7 +324,7 @@
         <div class="doctor-card">
           <div class="doctor-avatar-box">
             <span class="doctor-badge">Терапія & Ендодонтія</span>
-            <div class="doctor-avatar-symbol">👩‍⚕️</div>
+            <img src="assets/team/darya.jpg" alt="Дарʼя Олексіївна — Стоматолог терапевт-ортопед" class="doctor-avatar-img" loading="lazy">
           </div>
           <div class="doctor-info">
             <h3 class="doctor-name">Дарʼя Олексіївна</h3>
@@ -341,7 +337,7 @@
         <div class="doctor-card doctor-card--care">
           <div class="doctor-avatar-box">
             <span class="doctor-badge">Сервіс & Турбота</span>
-            <div class="doctor-avatar-symbol">✨</div>
+            <img src="assets/team/care_team.jpg" alt="Служба турботи та прийому пацієнтів" class="doctor-avatar-img" loading="lazy">
           </div>
           <div class="doctor-info">
             <h3 class="doctor-name">Служба турботи та прийому</h3>
